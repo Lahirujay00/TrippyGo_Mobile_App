@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Set the stroke (outline) -->
+    <stroke
+        android:width="2dp"
+        android:color="#A8A8A8"
+    android:dashWidth="8dp"
+    android:dashGap="4dp" /> <!-- Space between dashes -->
+    <!-- Set the background (optional) -->
+    <solid android:color="#FFFFFF" /> <!-- Background color inside the rectangle -->
+    <!-- Set rounded corners (optional) -->
+    <corners android:radius="8dp" /> <!-- Rounded corners -->
+</shape>

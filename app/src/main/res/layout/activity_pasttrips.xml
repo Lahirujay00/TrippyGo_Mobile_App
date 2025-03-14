@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pasttrips">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="335dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="38dp"
+            android:background="@color/white"
+            android:translationY="180dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="366dp"
+                android:layout_height="109dp"
+                android:scaleType="centerCrop"
+                android:translationX="-30dp"
+                android:translationY="-32dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/nuwaraeli" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="246dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="84dp"
+                    android:layout_marginEnd="126dp"
+                    android:text="Family Trip"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="124dp"
+                    android:text="5 Dec - 10 Dec"
+                    android:textColor="#8E8D8D"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.041"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="124dp"
+                    android:text="See More"
+                    android:textColor="#008080"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.047"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/getStartedButton4"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#008080"
+            android:text="Past Trips        "
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textColorLink="#000000"
+            app:cornerRadius="20px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/getStartedButton5"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="170dp"
+            android:backgroundTint="#D9D9D9"
+            android:fontFamily="@font/inter_medium"
+            android:text="Ongoing Trips"
+            android:textColor="#FBFBFB"
+            android:textColorLink="#000000"
+            app:cornerRadius="20px"
+            app:layout_constraintEnd_toEndOf="@+id/getStartedButton4"
+            app:layout_constraintStart_toStartOf="@+id/getStartedButton4"
+            app:layout_constraintTop_toTopOf="@+id/getStartedButton4" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="385dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/upper_rounded_taskbar"
+            android:translationX="-25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="59dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintStart_toStartOf="@+id/view7"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:srcCompat="@drawable/hhmo" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="59dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:srcCompat="@drawable/tripss" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="59dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:srcCompat="@drawable/savess" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="59dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintStart_toEndOf="@+id/imageView20"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:srcCompat="@drawable/profilee" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="335dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="38dp"
+            android:background="@color/white"
+            android:translationY="10dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/getStartedButton4"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="366dp"
+                android:layout_height="109dp"
+                android:scaleType="centerCrop"
+                android:translationX="-30dp"
+                android:translationY="-32dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/vbhfghfg" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="246dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="84dp"
+                    android:layout_marginEnd="126dp"
+                    android:text="Buddies Trip"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="124dp"
+                    android:text="15 Feb -17 Feb"
+                    android:textColor="#8E8D8D"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.041"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="124dp"
+                    android:text="See More"
+                    android:textColor="#008080"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.047"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="61dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="#008080"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:cornerRadius="800px"
+            app:layout_constraintBottom_toTopOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
