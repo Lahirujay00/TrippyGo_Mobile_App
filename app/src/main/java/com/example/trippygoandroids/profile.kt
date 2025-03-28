@@ -15,10 +15,17 @@ class profile : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_profile)
 
-        val getStartedButton: Button = findViewById(R.id.getStartedButton7)
+        val getStartedButton: Button = findViewById(R.id.signOutBtn)
         getStartedButton.setOnClickListener {
             // Create an Intent to start the location1 activity
             val intent = Intent(this, startupscreen::class.java)
+            startActivity(intent)
+        }
+
+        val editButton: Button = findViewById(R.id.editProfileBtn)
+        editButton.setOnClickListener {
+            // Create an Intent to start the location1 activity
+            val intent = Intent(this, activity_edit_profile::class.java)
             startActivity(intent)
         }
 

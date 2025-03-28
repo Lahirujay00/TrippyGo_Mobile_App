@@ -41,6 +41,14 @@ class location1 : AppCompatActivity() {
             val intent = Intent(this, profile::class.java)
             startActivity(intent)
         }
+
+        val button: ImageView = findViewById(R.id.backButton)
+        button.setOnClickListener {
+            // Create an Intent to start the StartupScreen activity
+            val intent = Intent(this, home::class.java)
+            startActivity(intent)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

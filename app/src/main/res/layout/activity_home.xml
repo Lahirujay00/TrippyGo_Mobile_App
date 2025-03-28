@@ -8,790 +8,793 @@
     android:background="@color/white"
     tools:context=".home">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp">
+    <View
+        android:id="@+id/view"
+        android:layout_width="385dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="6.5dp"
+        android:layout_marginEnd="6.5dp"
+        android:background="@drawable/round_taskbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:id="@+id/scrollView2"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="125dp"
+        android:layout_height="81dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trippygo1" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/srch" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="2dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            tools:visibility="visible">
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingBottom="24dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/upcomingTripsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/upcoming_trips"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/white"
-                    android:translationX="20dp"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="#FFF7F7"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19">
+            <TextView
+                android:id="@+id/upcomingSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/see_more"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/upcomingTripsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/upcomingTripsTitle" />
 
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/gallery2"
-                        tools:layout_editor_absoluteX="25dp"
-                        tools:layout_editor_absoluteY="769dp" />
+            <HorizontalScrollView
+                android:id="@+id/upcomingTripsScroll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingTripsTitle">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="126dp"
-                            android:text="Angel Beach"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="124dp"
-                            android:layout_marginBottom="9dp"
-                            android:text="Ahangama, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                        <Button
-                            android:id="@+id/button6"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="9dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="16dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginTop="17dp"
-                    android:background="@color/white"
-                    android:translationX="20dp"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/df174997696"
-                        tools:layout_editor_absoluteX="25dp"
-                        tools:layout_editor_absoluteY="769dp" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="120dp"
-                            android:layout_marginBottom="1dp"
-                            android:text="Le Grand Galle"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginEnd="151dp"
-                            android:layout_marginBottom="9dp"
-                            android:text="Galle, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                        <Button
-                            android:id="@+id/button6"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="16dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginTop="18dp"
-                    android:background="@color/white"
-                    android:translationX="20dp"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView22"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14"
-                    tools:ignore="DuplicateIds">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="309dp"
-                        android:layout_height="165dp"
-                        android:scaleType="centerCrop"
-                        android:translationX="-30dp"
-                        android:translationY="-32dp"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/g0780" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="126dp"
-                            android:text="Coconut Tree Hill"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="14dp"
-                            android:layout_marginEnd="124dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="Mirissa, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.428"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                        <Button
-                            android:id="@+id/button6"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="17dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="277dp"
-                    android:layout_height="185dp"
-                    android:background="@color/white"
-                    android:translationX="60dp"
-                    android:translationY="20dp"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="2dp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="333dp"
-                        android:layout_height="209dp"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/images" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="148dp"
-                            android:layout_marginEnd="186dp"
-                            android:layout_marginBottom="16dp"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Family Trip"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textView13"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginTop="96dp"
-                    android:layout_marginEnd="234dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Upcoming Trips"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
 
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginTop="220dp"
-                    android:layout_marginEnd="278dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Top Places"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.875"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="279dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Top Hotels"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.625"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginTop="298dp"
-                    android:layout_marginEnd="244dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Top Resturants"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="155dp"
-                    android:background="@color/white"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="#FFF7F7"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/ghfh2"
-                        tools:layout_editor_absoluteX="25dp"
-                        tools:layout_editor_absoluteY="769dp" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="126dp"
-                            android:text="The Bunglow Galle"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="124dp"
-                            android:layout_marginBottom="9dp"
-                            android:text="Galle, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.214"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                        <Button
-                            android:id="@+id/button6"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="9dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="16dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="277dp"
-                    android:layout_height="185dp"
-                    android:layout_marginStart="34dp"
-                    android:layout_marginEnd="107dp"
-                    android:background="@color/white"
-                    android:translationY="20dp"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="2dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="293dp"
-                        android:layout_height="187dp"
-                        android:scaleX="1"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/pexelsshainee2933943" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textView18"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="148dp"
-                            android:layout_marginEnd="172dp"
-                            android:layout_marginBottom="16dp"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Vacation Trip"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginEnd="155dp"
-                    android:background="@color/white"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/fgfg"
-                        tools:layout_editor_absoluteX="25dp"
-                        tools:layout_editor_absoluteY="769dp" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="88dp"
-                            android:layout_marginBottom="1dp"
-                            android:text="Araliya Unawatuna"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="124dp"
-                            android:layout_marginBottom="9dp"
-                            android:text="Unawatuna, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                        <Button
-                            android:id="@+id/button6"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="16dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/familyTripCard"
+                        android:layout_width="277dp"
+                        android:layout_height="185dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
 
                         <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="122dp"
-                            android:layout_height="134dp"
-                            app:srcCompat="@drawable/home"
-                            tools:layout_editor_absoluteY="344dp" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/night" />
 
-                </androidx.cardview.widget.CardView>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView22"
-                    android:layout_width="237dp"
-                    android:layout_height="238dp"
-                    android:layout_marginStart="29dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="152dp"
-                    android:background="@color/white"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14"
-                    tools:ignore="DuplicateIds">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="@string/family_trip"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/imageView100"
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:translationY="-1dp"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/junglesrilanka" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vacationTripCard"
+                        android:layout_width="277dp"
+                        android:layout_height="185dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="246dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/pexelsshainee2933943" />
 
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="137dp"
-                            android:layout_marginEnd="126dp"
-                            android:text="Jungle Beach"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textView16"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="124dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="Unawatuna, Sri Lanka"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toTopOf="@+id/button66"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="@string/vacation_trip"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <Button
-                            android:id="@+id/button66"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="34dp"
-                            android:layout_marginBottom="17dp"
-                            android:backgroundTint="#008080"
-                            android:text="Add to trip"
-                            android:textColor="@color/white"
-                            app:cornerRadius="20px"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addTripCard"
+                        android:layout_width="277dp"
+                        android:layout_height="185dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="#F5F5F5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
 
-                </androidx.cardview.widget.CardView>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="24dp"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="@string/add_new"
+                                android:textColor="@color/ic_launcher_background"
+                                android:textSize="48sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="385dp"
-            android:layout_height="78dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/round_taskbar"
-            android:translationX="6.5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/topPlacesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/top_places"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingTripsScroll" />
 
-        <View
-            android:id="@+id/view4"
-            android:layout_width="385dp"
-            android:layout_height="78dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="28dp"
-            android:background="@drawable/upper_rounded_taskbar"
-            android:elevation="20dp"
-            android:translationX="-25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/placesSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/see_more"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/topPlacesTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/topPlacesTitle" />
 
-        <View
-            android:id="@+id/view6"
-            android:layout_width="385dp"
-            android:layout_height="78dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="28dp"
-            android:background="@drawable/upper_rounded_taskbar"
-            android:translationX="-25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            <HorizontalScrollView
+                android:id="@+id/topPlacesScroll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topPlacesTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/jungleBeachCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageView100"
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/junglesrilanka" />
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/jungle_beach"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/unawatuna_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                            <Button
+                                android:id="@+id/jungleBeachButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/ic_launcher_background"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/coconutTreeHillCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/g0780" />
+
+                            <TextView
+                                android:id="@+id/coconutTreeHillName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/coconut_tree_hill"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/coconutTreeHillLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/mirissa_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/coconutTreeHillName" />
+
+                            <Button
+                                android:id="@+id/coconutTreeHillButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/ic_launcher_background"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/coconutTreeHillLocation" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/angelBeachCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="#FFF7F7"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/gallery2" />
+
+                            <TextView
+                                android:id="@+id/angelBeachName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/angel_beach"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/angelBeachLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/ahangama_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/angelBeachName" />
+
+                            <Button
+                                android:id="@+id/angelBeachButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="#008080"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/angelBeachLocation" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/topHotelsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/top_hotels"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topPlacesScroll" />
+
+            <TextView
+                android:id="@+id/hotelsSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/see_more"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/topHotelsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/topHotelsTitle" />
+
+            <HorizontalScrollView
+                android:id="@+id/topHotelsScroll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topHotelsTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/araliyaHotelCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/fgfg" />
+
+                            <TextView
+                                android:id="@+id/araliyaHotelName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/araliya_unawatuna"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/araliyaHotelLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/unawatuna_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/araliyaHotelName" />
+
+                            <Button
+                                android:id="@+id/araliyaHotelButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="#008080"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/araliyaHotelLocation" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/leGrandHotelCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/df174997696" />
+
+                            <TextView
+                                android:id="@+id/leGrandHotelName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/le_grand_galle"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/leGrandHotelLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/galle_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/leGrandHotelName" />
+
+                            <Button
+                                android:id="@+id/leGrandHotelButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="#008080"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/leGrandHotelLocation" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/topRestaurantsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/top_restaurants"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topHotelsScroll" />
+
+            <TextView
+                android:id="@+id/restaurantsSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/see_more"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/topRestaurantsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/topRestaurantsTitle" />
+
+            <HorizontalScrollView
+                android:id="@+id/topRestaurantsScroll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topRestaurantsTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bungalowGalleCard"
+                        android:layout_width="237dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ghfh2" />
+
+                            <TextView
+                                android:id="@+id/bungalowGalleName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="137dp"
+                                android:text="@string/bungalow_galle"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/bungalowGalleLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/galle_location"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bungalowGalleName" />
+
+                            <Button
+                                android:id="@+id/bungalowGalleButton"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="#008080"
+                                android:text="@string/add_to_trip"
+                                android:textColor="@color/white"
+                                app:cornerRadius="20px"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bungalowGalleLocation" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="385dp"
+        android:layout_height="78dp"
+        android:background="@drawable/upper_rounded_taskbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@+id/scrollView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/srch" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="59dp"
+            android:id="@+id/homeIcon"
+            android:layout_width="0dp"
             android:layout_height="46dp"
-            android:layout_marginStart="-4dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintHorizontal_bias="0.018"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4"
-            app:layout_constraintVertical_bias="0.468"
+            android:layout_weight="1"
+            android:tint="@color/ic_launcher_background"
             app:srcCompat="@drawable/hhmo" />
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="125dp"
-            android:layout_height="81dp"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintHorizontal_bias="0.228"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/trippygo1" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="59dp"
+            android:id="@+id/tripsIcon"
+            android:layout_width="0dp"
             android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="17dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view6"
-            app:layout_constraintStart_toEndOf="@+id/imageView11"
-            app:layout_constraintTop_toTopOf="@+id/view4"
+            android:layout_weight="1"
             app:srcCompat="@drawable/tripss" />
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="59dp"
+            android:id="@+id/savesIcon"
+            android:layout_width="0dp"
             android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="17dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view6"
-            app:layout_constraintStart_toEndOf="@+id/imageView13"
-            app:layout_constraintTop_toTopOf="@+id/view4"
+            android:layout_weight="1"
             app:srcCompat="@drawable/savess" />
 
         <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="59dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view6"
-            app:layout_constraintStart_toEndOf="@+id/imageView14"
-            app:layout_constraintTop_toTopOf="@+id/view4"
+            android:id="@+id/profileIcon"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/profilee" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

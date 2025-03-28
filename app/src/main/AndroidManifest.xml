@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TrippyGoAndroids"
         tools:targetApi="31">
         <activity
+            android:name=".activity_edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".finalDetails"
+            android:exported="false" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity

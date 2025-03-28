@@ -15,21 +15,32 @@ class signup : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_signup)
 
-        val getStartedButton: Button = findViewById(R.id.button4)
-        getStartedButton.setOnClickListener {
-            // Create an Intent to start the NextActivity
+        // Sign up button - navigates to home screen
+        val signUpButton: Button = findViewById(R.id.button4)
+        signUpButton.setOnClickListener {
             val intent = Intent(this, home::class.java)
             startActivity(intent)
+            finish() // Close the current activity
         }
 
-        val skipTextView: TextView = findViewById(R.id.textView12)
-        skipTextView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
+        // Google sign up button
+        val googleSignUpButton: Button = findViewById(R.id.button5)
+        googleSignUpButton.setOnClickListener {
+            // For now, also navigate to home screen
+            val intent = Intent(this, home::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        // Sign in text - navigates to signin screen
+        val signInTextView: TextView = findViewById(R.id.textView12)
+        signInTextView.setOnClickListener {
             val intent = Intent(this, signin::class.java)
             startActivity(intent)
+            finish() // Close the current activity
         }
 
-
+        // Handle window insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

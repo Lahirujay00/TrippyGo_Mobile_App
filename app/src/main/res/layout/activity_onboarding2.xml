@@ -24,7 +24,7 @@
             android:layout_marginEnd="130dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.001"
@@ -34,49 +34,44 @@
             android:id="@+id/button"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="282dp"
-            android:backgroundTint="#008080"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/ic_launcher_background"
             android:text="Next"
-            android:textColor="#000000"
-            android:textColorLink="#000000"
+            android:textColor="@color/black"
+            android:textColorLink="@color/black"
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.448"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.957" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="282dp"
-            android:layout_height="74dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="316dp"
             android:layout_marginEnd="93dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/inria_sans_bold_italic"
-            android:text="Plan Your Perfect Trip with Ease!"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:text="@string/plan_perfect_trip"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="30sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="344dp"
-            android:layout_height="63dp"
-            android:layout_marginBottom="26dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:fontFamily="@font/inter"
-            android:text="Your ultimate travel companion for organizing trips, exploring destinations, and managing itineraries effortlessly."
-            android:textColor="#FFFFFF"
+            android:text="@string/app_description"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -19,6 +20,11 @@ class Trips : AppCompatActivity() {
         getStartedButton.setOnClickListener {
             // Create an Intent to start the NextActivity
             val intent = Intent(this, pasttrips::class.java)
+            startActivity(intent)
+        }
+        val vacationTripCard: CardView = findViewById(R.id.cardView2)
+        vacationTripCard.setOnClickListener {
+            val intent = Intent(this, finalDetails::class.java)
             startActivity(intent)
         }
 

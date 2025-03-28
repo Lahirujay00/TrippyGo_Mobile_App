@@ -5,240 +5,370 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".newTrip">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
-
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="220dp"
-            android:layout_marginEnd="307dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="End Date"
-            android:textColor="#807F7F"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.272"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-        <EditText
-            android:id="@+id/editTextText7"
-            android:layout_width="333dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="192dp"
-            android:background="@drawable/box"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#A6A3A3"
-            android:textColorHint="#9B9A9A"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="333dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/box"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#A6A3A3"
-            android:textColorHint="#9B9A9A"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="307dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="Start Date"
-            android:textColor="#807F7F"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="333dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="39dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="39dp"
-            android:background="@drawable/box"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#A6A3A3"
-            android:textColorHint="#9B9A9A"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="307dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="Trip Name"
-            android:textColor="#807F7F"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-        <Button
-            android:id="@+id/getStartedButton5"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="253dp"
-            android:layout_marginTop="95dp"
-            android:layout_marginEnd="39dp"
-            android:backgroundTint="#008080"
-            android:fontFamily="@font/inter_medium"
-            android:text="Next"
-            android:textColor="#FBFBFB"
-            android:textColorLink="#000000"
-            app:cornerRadius="20px"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
-
-        <View
-            android:id="@+id/view7"
-            android:layout_width="385dp"
-            android:layout_height="78dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="28dp"
-            android:background="@drawable/upper_rounded_taskbar"
-            android:translationX="-25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toStartOf="@+id/view7"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/hhmo" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/tripss" />
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/savess" />
-
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="59dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView20"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/profilee" />
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="131dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="131dp"
+            android:layout_gravity="center"
             android:fontFamily="@font/inter_medium"
-            android:text="Create New Trip"
+            android:text="@string/create_new_trip"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20sp" />
 
-        <View
-            android:id="@+id/view5"
-            android:layout_width="333dp"
-            android:layout_height="92dp"
-            android:layout_marginStart="39dp"
-            android:layout_marginTop="29dp"
-            android:layout_marginEnd="39dp"
-            android:background="@drawable/dotted_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view5"
+                android:layout_width="333dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="39dp"
+                android:background="@drawable/dotted_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:contentDescription="@string/upload_icon_desc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32"
+                    app:srcCompat="@drawable/upld" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/upload_trip_cover"
+                    android:textColor="@color/Grey_2"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/trip_name"
+                android:textColor="@color/Grey_1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/box"
+                android:ems="10"
+                android:hint="Enter trip name"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#A6A3A3"
+                android:textColorHint="#9B9A9A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/start_date"
+                android:textColor="@color/Grey_1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/box"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:ems="10"
+                android:hint="Select start date"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#A6A3A3"
+                android:textColorHint="#9B9A9A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/end_date"
+                android:textColor="@color/Grey_1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+            <EditText
+                android:id="@+id/editTextText7"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/box"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:ems="10"
+                android:hint="Select end date"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#A6A3A3"
+                android:textColorHint="#9B9A9A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <TextView
+                android:id="@+id/tagsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Trip Type (Optional)"
+                android:textColor="@color/Grey_1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+
+            <HorizontalScrollView
+                android:id="@+id/tagsScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tagsTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/familyTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_tag"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Family"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/buddiesTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_tag"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Buddies"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/vacationTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_tag"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Vacation"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/businessTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_tag"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Business"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/adventureTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_tag"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Adventure"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/getStartedButton5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/ic_launcher_background"
+                android:fontFamily="@font/inter_medium"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textColorLink="@color/black"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tagsScrollView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/upper_rounded_taskbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="147dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="148dp"
-            app:layout_constraintEnd_toEndOf="@+id/view5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/view5"
-            app:layout_constraintTop_toTopOf="@+id/view5"
-            app:srcCompat="@drawable/upld" />
+            android:id="@+id/imageView18"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/hhmo" />
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="110dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="Upload trip cover image"
-            android:textColor="#A8A8A8"
-            android:textSize="10sp"
-            app:layout_constraintEnd_toEndOf="@+id/view5"
-            app:layout_constraintStart_toStartOf="@+id/view5"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/tripss" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/savess" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/profilee" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

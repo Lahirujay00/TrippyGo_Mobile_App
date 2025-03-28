@@ -5,11 +5,16 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 
 class home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,46 +22,39 @@ class home : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
 
-        // Find the "Trip" TextView and set its click listener
-        val tripView: ImageView = findViewById(R.id.imageView13)
-        tripView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
+        val tripsIcon: ImageView = findViewById(R.id.tripsIcon)
+        tripsIcon.setOnClickListener {
             val intent = Intent(this, Trips::class.java)
             startActivity(intent)
         }
 
-        val lView: ImageView = findViewById(R.id.imageView100)
-        lView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
-            val intent = Intent(this, location1::class.java)
-            startActivity(intent)
-        }
-
-        val locationView: CardView = findViewById(R.id.cardView22)
-        locationView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
-            val intent = Intent(this, location1::class.java)
-            startActivity(intent)
-        }
-
-        val getStartedButton: Button = findViewById(R.id.button66)
-        getStartedButton.setOnClickListener {
-            // Create an Intent to start the location1 activity
-            val intent = Intent(this, location1::class.java)
-            startActivity(intent)
-        }
-
-        val cView: ImageView = findViewById(R.id.imageView14)
-        cView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
+        val savesIcon: ImageView = findViewById(R.id.savesIcon)
+        savesIcon.setOnClickListener {
             val intent = Intent(this, collection::class.java)
             startActivity(intent)
         }
 
-        val hView: ImageView = findViewById(R.id.imageView15)
-        hView.setOnClickListener {
-            // Create an Intent to start the StartupScreen activity
+        val profileIcon: ImageView = findViewById(R.id.profileIcon)
+        profileIcon.setOnClickListener {
             val intent = Intent(this, profile::class.java)
+            startActivity(intent)
+        }
+
+        val jungleBeachCard: CardView = findViewById(R.id.jungleBeachCard)
+        jungleBeachCard.setOnClickListener {
+            val intent = Intent(this, location1::class.java)
+            startActivity(intent)
+        }
+
+        val jungleBeachButton: Button = findViewById(R.id.jungleBeachButton)
+        jungleBeachButton.setOnClickListener {
+            val intent = Intent(this, location1::class.java)
+            startActivity(intent)
+        }
+
+        val addTrip: CardView = findViewById(R.id.addTripCard)
+        addTrip.setOnClickListener {
+            val intent = Intent(this, newTrip::class.java)
             startActivity(intent)
         }
 
@@ -67,3 +65,7 @@ class home : AppCompatActivity() {
         }
     }
 }
+
+
+
+

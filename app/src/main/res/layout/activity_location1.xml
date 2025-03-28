@@ -6,128 +6,365 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:translationY="-10dp"
     tools:context=".location1">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/locationScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="10dp">
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ScrollView
-            android:layout_width="413dp"
-            android:layout_height="730dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/heroImageCard"
+                android:layout_width="0dp"
+                android:layout_height="280dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/heroImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/jungle_beach"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/junglebeachsrilanka" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/gradient_overlay"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/backButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/circle_background"
+                        android:elevation="2dp"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/circle_background"
+                        android:elevation="2dp"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_share"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/locationTypeTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/tag_background"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="Beach"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/locationTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/jungle_beach"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heroImageCard" />
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationTitle"
+                app:tint="#A8A8A8" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/unawatuna_location"
+                android:textColor="#A8A8A8"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/locationIcon"
+                app:layout_constraintTop_toTopOf="@+id/locationIcon" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="726dp"
-                tools:layout_editor_absoluteY="1dp">
-
-                <Button
-                    android:id="@+id/getStartedButton6"
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:backgroundTint="#008080"
-                    android:text="Add to trip "
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textColorLink="#000000"
-                    app:cornerRadius="20px"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.48"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view12" />
+                android:id="@+id/ratingSection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_corner_background"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationText">
 
                 <TextView
-                    android:id="@+id/textView36"
+                    android:id="@+id/ratingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="4.7"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="#FFC107"
+                    android:rating="4.7"
+                    android:stepSize="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingText" />
+
+                <TextView
+                    android:id="@+id/reviewsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="(352 reviews)"
+                    android:textColor="#A8A8A8"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                    app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                    app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+                <TextView
+                    android:id="@+id/highestRated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Jungle Beach"
+                    android:text="Highest rated for:"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.13"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-                <View
-                    android:id="@+id/view12"
-                    android:layout_width="368dp"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="12dp"
-                    android:background="#D9D9D9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.489"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView43" />
-
-                <TextView
-                    android:id="@+id/textView43"
-                    android:layout_width="362dp"
-                    android:layout_height="546dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
-                    android:text="Jungle Beach in Unawatuna is a secluded tropical paradise, nestled near Rumassala Hill and accessible via a short jungle trek or boat ride.\n\nWith golden sand, calm turquoise waters, and vibrant marine life, it's perfect for swimming, snorkeling, and exploring coral reefs. The underwater ecosystem is rich with colorful fish, sea turtles, and unique coral formations, making it a favorite spot for nature enthusiasts.\n\nThe beach is less crowded than Unawatuna, offering a peaceful escape with a few small cafés serving fresh seafood and drinks. These cafés are known for their relaxed vibe and delicious local cuisine, including grilled fish and tropical fruit juices.\n\nSurrounded by lush greenery and occasional wildlife, it’s an ideal spot for relaxation. Monkeys, exotic birds, and butterflies are often spotted in the area, adding to the natural charm. Nearby, the Japanese Peace Pagoda provides stunning panoramic views of the coastline, adding a touch of cultural and spiritual significance to this hidden gem. The pagoda is a serene place to reflect and enjoy the beauty of the surrounding landscape.\n\nWhether you're looking for adventure, relaxation, or a bit of both, Jungle Beach offers a unique and unforgettable experience."
-                    android:textColor="#A8A8A8"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView44" />
+                    app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
                 <TextView
-                    android:id="@+id/textView44"
+                    android:id="@+id/sceneryTag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_tag"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Unawatuna, Sri Lanka"
-                    android:textColor="#A8A8A8"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.139"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="Scenery"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView36" />
+                    app:layout_constraintTop_toBottomOf="@+id/highestRated" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="385dp"
-                    android:layout_height="259dp"
-                    android:background="@color/white"
-                    android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="2dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/snorkelingTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rounded_tag"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="Snorkeling"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sceneryTag"
+                    app:layout_constraintStart_toEndOf="@+id/sceneryTag"
+                    app:layout_constraintTop_toTopOf="@+id/sceneryTag" />
 
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="428dp"
-                        android:layout_height="277dp"
-                        android:scaleType="centerCrop"
-                        android:scaleX="1"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/junglebeachsrilanka" />
-
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/privacyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rounded_tag"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="Privacy"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/snorkelingTag"
+                    app:layout_constraintStart_toEndOf="@+id/snorkelingTag"
+                    app:layout_constraintTop_toTopOf="@+id/snorkelingTag" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/descriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingSection" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/inter_medium"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/jungle_beach_description"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTitle" />
+
+            <TextView
+                android:id="@+id/openingHoursTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Opening Hours"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+            <TextView
+                android:id="@+id/openingHoursText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Open 24 hours, best visited during daylight"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/openingHoursTitle" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#E0E0E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/openingHoursText" />
+
+            <Button
+                android:id="@+id/addToTripButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#008080"
+                android:fontFamily="@font/inter_medium"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Add to trip"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="83dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,67 +373,52 @@
 
         <View
             android:id="@+id/view7"
-            android:layout_width="385dp"
+            android:layout_width="match_parent"
             android:layout_height="78dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="28dp"
             android:background="@drawable/upper_rounded_taskbar"
-            android:translationX="-25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toStartOf="@+id/view7"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/hhmo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/tripss" />
 
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="59dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/savess" />
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/hhmo" />
 
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="59dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:translationZ="21dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view7"
-            app:layout_constraintStart_toEndOf="@+id/imageView20"
-            app:layout_constraintTop_toTopOf="@+id/view7"
-            app:srcCompat="@drawable/profilee" />
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tripss" />
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/savess" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/profilee" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
